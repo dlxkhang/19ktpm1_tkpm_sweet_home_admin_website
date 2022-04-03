@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='/public/stylesheets/style.css' />
+    <link type="text/css" rel="stylesheet" href="/public/stylesheets/simplePagination.css"/>
+    <link rel='stylesheet' href='/public/stylesheets/app.css' />
+  </head>
+  <body>
+
+
+    <!--*******************
+    Preloader start
+********************-->
+<div id="preloader">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<!--*******************
+    Preloader end
+********************-->
+
+<div class="overlay-spinner"></div>
+{{!-- Spinner Loading--}}
+<div class="spanner">
+  <div class="loader"></div>
+  <p>LOADING...</p>
+</div>
+<!--**********************************
+    Main wrapper start
+***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+        Nav header start./images/property/preview/asd-my7bu6vokwobzeja-preview-0.jpeg
+    ***********************************-->
+    <div class="nav-header">
+        {{!-- <a href="#" class="brand-logo">
+            <img class="logo-abbr" src="https://res.cloudinary.com/dq4xoyzib/image/upload/v1638422871/sweet-home/images/property/test-nha-1-my7budp4kwoioae2/preview/test-nha-1-my7budp4kwoioae2-preview-0.jpg" alt="">
+            <img class="logo-compact" src="https://res.cloudinary.com/dq4xoyzib/image/upload/v1638422871/sweet-home/images/property/test-nha-1-my7budp4kwoioae2/preview/test-nha-1-my7budp4kwoioae2-preview-0.jpg" alt="">
+            <img class="brand-title" src="https://res.cloudinary.com/dq4xoyzib/image/upload/v1638422871/sweet-home/images/property/test-nha-1-my7budp4kwoioae2/preview/test-nha-1-my7budp4kwoioae2-preview-0.jpg" alt="">
+        </a> --}}
+
+        <div class="nav-control">
+            <div class="hamburger">
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+        Nav header end
+    ***********************************-->
+
+    <!--**********************************
+        Header start
+    ***********************************-->
+    <div class="header">
+        <div class="header-content">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-between">
+                    <div class="header-left">
+                        
+                    </div>
+
+                    <ul class="navbar-nav header-right">
+                        <li class="nav-item dropdown notification_dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                <i class="mdi mdi-bell"></i>
+                                <div class="pulse-css"></div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <ul class="list-unstyled">
+                                    <li class="media dropdown-item">
+                                        <span class="success"><i class="ti-user"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Martin</strong> has added a <strong>customer</strong> Successfully
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="primary"><i class="ti-shopping-cart"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Jennifer</strong> purchased Light Dashboard 2.0.</p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="danger"><i class="ti-bookmark"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>Robin</strong> marked a <strong>ticket</strong> as unsolved.
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="primary"><i class="ti-heart"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong>David</strong> purchased Light Dashboard 1.0.</p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                    <li class="media dropdown-item">
+                                        <span class="success"><i class="ti-image"></i></span>
+                                        <div class="media-body">
+                                            <a href="#">
+                                                <p><strong> James.</strong> has added a<strong>customer</strong> Successfully
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <span class="notify-time">3:20 am</span>
+                                    </li>
+                                </ul>
+                                <a class="all-notification" href="#">See all notifications <i
+                                        class="ti-arrow-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown header-profile">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                <i class="mdi mdi-account"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="/profile" class="dropdown-item">
+                                    <i class="icon-user"></i>
+                                    <span class="ml-2">Profile </span>
+                                </a>
+                                <a href="/logout" class="dropdown-item">
+                                    <i class="icon-key"></i>
+                                    <span class="ml-2">Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--**********************************
+        Header end ti-comment-alt
+    ***********************************-->
+
+    <!--**********************************
+        Sidebar start
+    ***********************************-->
+    <div class="quixnav">
+        <div class="quixnav-scroll">
+            <ul class="metismenu" id="menu">
+                <li class="nav-label first">Main Menu</li>
+                <li><a href="/"><i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
+                </li>
+                
+                <li><a href="/property" aria-expanded="false"><i class="icon icon-globe-2"></i><span
+                class="nav-text">Properties</span></a></li>
+                <li><a href="/home-tour" aria-expanded="false"><i class="fa fa-calendar"></i><span
+                class="nav-text">Home Tour</span></a></li>
+                <li><a aria-expanded="false" class="has-arrow"><i class="icon icon-single-04"></i><span
+                class="nav-text">Accounts</span></a>
+                    <ul aria-expanded="false" class="mm-collapse" style="height:0px;">
+                        <li>
+                            <a href="/account/admin">Admin account</a>
+                        </li>
+                        <li>
+                            <a href="/account/user">User account</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--**********************************
+        Sidebar end
+    ***********************************-->
+
+
+    {{{body}}}
+    
+
+     <!--**********************************
+        Footer start
+    ***********************************-->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">Quixkit</a> 2019</p>
+        </div>
+    </div>
+    <!--**********************************
+        Footer end
+    ***********************************-->
+
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+
+    {{!- <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
+    <!-- Required vendors -->
+    <script src="/public/javascripts/vendor/global/global.min.js"></script>
+    <script src="/public/javascripts/js/quixnav-init.js"></script>
+    <script src="/public/javascripts/js/custom.min.js"></script>
+    
+    <script src="../../public/jquery/jquery.js"></script>
+    <script src="../../public/jquery/pagination.js"></script>
+    <script src="../../public/jquery/paging.js"></script>
+    <script src="../../public/jquery/getRequest.js"></script>
+    <script src="../../public/jquery/postRequest.js"></script>
+    <script src="../../public/jquery/deleteRequest.js"></script>
+    <script src="../../public/jquery/modalEvent.js"></script> 
+    <script src="../../public/jquery/form.js"></script> --}}
+  
+  </body>
+</html>
