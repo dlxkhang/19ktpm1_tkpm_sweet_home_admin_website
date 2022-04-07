@@ -18,5 +18,13 @@ router.get('/page/:currentPage', propertyController.loadProperties);
 
 router.get('/:id', propertyController.loadProperty);
 
+// upload.fields include name attribute in <img> tags
+router.post('/add', upload.fields([{ name: 'inputPreviewImage', maxCount: 1 }, { name: 'inputDetailImage', maxCount: 10 }]), propertyController.addNewProperty);
+
+// delete a property
+router.delete('/delete/:id', propertyController.deleteProperty);
+
+// update a property
+router.post('/edit/:id',upload.fields([{ name: 'inputPreviewImage', maxCount: 1 }, { name: 'inputDetailImage', maxCount: 10 }]), propertyController.editProperty);
 
 module.exports = router;
