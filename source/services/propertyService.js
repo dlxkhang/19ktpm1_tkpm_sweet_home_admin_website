@@ -152,10 +152,7 @@ module.exports.addNewProperty = (previewImage, detailImages, newProperty) => {
             name: newProperty.sellerName,
             email: newProperty.sellerEmail,
         };
-        if(newProperty.sellerPhoneNumber != '')
-            tmpSeller["phoneNumber"] = newProperty.sellerPhoneNumber;
-
-
+        
         // Get category objectID from database
         const categoryObjectId = await getCategoryIdByName(newProperty.propertyCategory);
         // Create category object with data in POST request
@@ -239,10 +236,7 @@ module.exports.editProperty = (propertyId, editProperty) => {
             name: editProperty.sellerName,
             email: editProperty.sellerEmail,
         };
-        if(editProperty.sellerPhoneNumber != '')
-            tmpSeller["phoneNumber"] = editProperty.sellerPhoneNumber;
-
-
+        
         // Get category objectID from database
         const categoryObjectId = await getCategoryIdByName(editProperty.propertyCategory);
         // Create category object with data in POST request
