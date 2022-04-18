@@ -19,7 +19,6 @@ class propertyController {
     }
 
     async loadProperty(req, res) {
-        console.log('req: ' + req.params.id);
         const property = await propertyService.loadProperty(req.params.id);
         res.send(property);
     }
