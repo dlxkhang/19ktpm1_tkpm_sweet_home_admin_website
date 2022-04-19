@@ -23,7 +23,7 @@ function loadAllHomeTour() {
     return new Promise(async (resolve, reject) => {
         scheduleModel
         .find()
-        .select('propertyId category')
+        .select('propertyId createdAt')
         .populate({
             path: 'propertyId',
             select: 'category'
@@ -31,8 +31,8 @@ function loadAllHomeTour() {
         .exec((err, schedules) => {
             const result = schedules.map((homeTour) => {
                 return {
-                    category: homeTour.propertyId.category,
-                    createdAt: moment(homeTour.createdAt).format("DD/MM/YYYY")
+                    category: homeTour.propertyId.category.name,
+                    createdAt: moment(homeTour.createdAt).format("DD/MM/YYYY").toLocaleString()
                 }
             })
 
