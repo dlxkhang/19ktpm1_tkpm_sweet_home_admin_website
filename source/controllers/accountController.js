@@ -47,6 +47,16 @@ class accountController{
         
     }
 
+    async showUserAccount(req, res) {
+        res.render('account/user');
+    }
+
+    async loadUserPerPage(req, res) {
+      const listUser = await adminService.loadUserPerPage(req.params.page);
+      if(listUser)
+        res.send(listUser);
+    }
+
 }
 
 module.exports = new accountController();
