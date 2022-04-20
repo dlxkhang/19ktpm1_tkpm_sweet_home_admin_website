@@ -17,11 +17,11 @@ $(window).on('load', () => {
                  // Show loading spinner
                   $('.spanner').addClass('show');
                   $('.overlay-spinner').addClass('show');
-                  $('#addPropertyModal').modal('hide');
+                  $('#addPropertyModal').hide();
             },
             success: function(res){
                  // Show success modal
-                  $('#successModal').modal('show');
+                  $('#successModal').show();
                   // Hide loading spinner
                   $('.spanner').removeClass('show');
                   $('.overlay-spinner').removeClass('show');
@@ -35,8 +35,8 @@ $(window).on('load', () => {
                if(errorThrown) {
                    console.log(errorThrown);
                    // Show error modal
-                    $('#errorModal').modal('show');
-                    $('#addPropertyModal').modal('hide');
+                    $('#errorModal').show();
+                    $('#addPropertyModal').hide();
                     $('#errorTitle').text('Error');
                     $('#errorMsg').text('Error: ' + errorThrown);
                }
