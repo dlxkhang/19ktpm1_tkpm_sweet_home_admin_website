@@ -69,6 +69,11 @@ class accountController{
           res.send(ack);
       }
 
+      async loadUserDetail(req, res) {
+        const user = await adminService.loadUserDetail(req.params.id);
+        res.render('userDetail', {user});
+      }
+
 }
 
 module.exports = new accountController();
