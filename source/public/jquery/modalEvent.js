@@ -27,7 +27,7 @@ $(window).on('load', () => {
                 <br>
             </div>`;
 
-        const container = $("#featureList");
+        const container = $(".addPropertyFeatureList");
         container.append(template);
     });
 
@@ -39,11 +39,11 @@ $(window).on('load', () => {
     });
 
     // Close add new property modal
-    // $("#confirmFormBtn").click(function (e) { 
-    //     e.preventDefault();
-    //     $(this).removeAttr("href");
-    //     $('#addPropertyModal').modal('hide');
-    // });
+    $("#confirmFormBtn").click(function (e) { 
+        e.preventDefault();
+        $(this).removeAttr("href");
+        $('#addPropertyModal').modal('hide');
+    });
 
     // Clear form input and close add new property modal when click cancel button
     $("#cancelFormBtn").click(function (e) { 
