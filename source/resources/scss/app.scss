@@ -38,16 +38,12 @@ z-index: 9999;
 visibility: hidden;
 }
 
-
-
-.overlay-spinner{
-position: absolute;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.3);
-visibility: hidden;
-z-index: 9999;
+.spanner p {
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
 }
+
 
 .loader,
 .loader:before,
