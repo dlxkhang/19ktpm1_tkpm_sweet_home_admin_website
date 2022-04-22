@@ -44,6 +44,14 @@ visibility: hidden;
 	font-weight: bold;
 }
 
+.overlay-spinner{
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.3);
+visibility: hidden;
+z-index: 9999;
+}
 
 .loader,
 .loader:before,
