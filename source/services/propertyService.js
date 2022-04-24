@@ -111,7 +111,7 @@ async function generateUploadPath(base, listOfImage, slug, type) {
         var pathList = [];
         for(let i = 0; i < listOfImage.length; i++) {
             pathList.push(base + slug + '-' + type + '-' + i.toString());
-            if(i == listOfImage.length - 1)
+            if(i == listOfImage.length)
                 resolve(pathList);
         }
     });
@@ -262,33 +262,6 @@ module.exports.editProperty = (propertyId, editProperty) => {
 
         // Generate slug from property name, language: vi
         const slugGenerateField = 'name';
-        const slug = await generateUniqueSlug(tmpProperty, slugGenerateField);
-
-        // if(previewImage) {
-        //     // Base paths to store uploaded images
-        //     const baseForPreview = 'sweet-home/images/property/' + slug + '/preview/';
-
-        //     // Generate upload path for preview and detail images
-        //     const previewPath = await generateUploadPath(baseForPreview, previewImage, slug, "preview");
-
-        //     // Save generated paths to model
-        //     var previewImgUrls = [];
-        //     previewImgUrls = await uploadImageToCloud(previewPath, previewImage);
-        //     tmpProperty['previewImage'] = previewImgUrls[0];
-        // }
-        
-        // if(detailImages) {
-        //     // Base paths to store uploaded images
-        //     const baseForDetail = 'sweet-home/images/property/' + slug + '/detail/';
-
-        //     // Generate upload path for preview and detail images
-        //     const detailPaths = await generateUploadPath(baseForDetail, detailImages, slug, "detail");
-
-        //     // Save generated paths to model
-        //     var detailImgUrls = [];
-        //     detailImgUrls = await uploadImageToCloud(detailPaths, detailImages);
-        //     tmpProperty['detailImage'] = detailImgUrls;
-        // }
 
         // Find and update property in database
         propertyModel.findOneAndUpdate({ _id: propertyId }, tmpProperty, {upsert:true}, (err) => {

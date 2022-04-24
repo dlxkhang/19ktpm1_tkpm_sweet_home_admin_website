@@ -30,10 +30,6 @@ $(window).on('load', function () {
 
     function configBarChart(label, datasets) {
         const ctx = document.getElementById('homeTourOverview');
-        datasets[0]["backgroundColor"] = 'rgb(0, 51, 153)';
-        datasets[1]["backgroundColor"] = 'rgb(204, 204, 0)';
-        datasets[2]["backgroundColor"] = 'rgb(153, 51, 153)';
-        datasets[3]["backgroundColor"] = 'rgb(51, 153, 51)';
         
         homeTourOverviewChart = new Chart(ctx, {
             type: 'bar',
@@ -50,6 +46,11 @@ $(window).on('load', function () {
                 }
             }
         });
+
+        datasets[0]["backgroundColor"] = 'rgb(0, 51, 153)';
+        datasets[1]["backgroundColor"] = 'rgb(204, 204, 0)';
+        datasets[2]["backgroundColor"] = 'rgb(153, 51, 153)';
+        datasets[3]["backgroundColor"] = 'rgb(51, 153, 51)';
     }
 
     function loadHomeTourByDays() {
