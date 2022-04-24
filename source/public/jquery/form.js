@@ -1,9 +1,9 @@
 $(window).on('load', () => {
     function isMinLength(value, min) {
-        return value.length >= min ? undefined : `Vui lòng nhập tối thiểu ${min} ký tự`;
+        return value.length >= min ? undefined : `Phải nhập tối thiểu ${min} ký tự`;
     }
     function isRequired(value) {
-        return value ? undefined : 'Vui lòng nhập trường này';
+        return value ? undefined : 'Không để trống trường này';
     }
 
     function isMatch(pwd,confirm){
