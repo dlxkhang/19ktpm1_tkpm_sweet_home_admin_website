@@ -1,9 +1,11 @@
 $(window).on('load', () => {
+    const origin   = window.location.origin;
+
     // // Delete a property according to the delete button clicked
     $(document).on( 'click', '#delete-modal-delete-btn', function (e) { 
         e.preventDefault();
         $(this).removeAttr("href");
-        const origin   = window.location.origin;
+        
         const url = origin + '/property';
         const propertyId = $(this).attr('class').split(' ')[2];
         $.ajax({
@@ -22,7 +24,6 @@ $(window).on('load', () => {
                 $('#successModal').modal('show');
                 // Hide loading spinner
                 $('.spanner').removeClass('show');
-                $('.overlay-spinner').removeClass('show');
                 $('#successTitle').text('Success');
                 $('#successMsg').text('Property has deleted in the database');
 
