@@ -23,15 +23,16 @@ function getParent(element, selector) {
     }
 }
 
-function disableBtn(btn){
-    if(!btn.classList.contains("disabled")){
-        btn.classList.add("disabled");
-    }
-}
 function enableBtn(btn){
 
     if(!getParent(password,'.form-group').classList.contains("invalid") && !getParent(username,'.form-group').classList.contains("invalid") ){
         btn.classList.remove("disabled");
+    }
+}
+
+function disableBtn(btn){
+    if(!btn.classList.contains("disabled")){
+        btn.classList.add("disabled");
     }
 }
 
