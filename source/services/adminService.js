@@ -70,7 +70,7 @@ exports.changePassword = (username,oldPassword,newPassword) =>{
         if(isMatch) {
             const hashPassword = await bcrypt.hash(newPassword, 10);
             // Find and update user password in database
-            adminModel.updateOne({ username: username },{password: hashPassword}, (err) => {
+            adminModel.update({ username: username },{password: hashPassword}, (err) => {
                 if(err) {
                     console.log(err);
                     reject(err);
