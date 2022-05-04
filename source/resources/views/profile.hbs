@@ -26,7 +26,7 @@
                             <div class="cover-photo"></div>
                         </div>
                         <div class="profile-photo">
-                            <img src="{{#if admin.avatar}}admin.avatar{{else}}https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png{{/if}}" class="img-fluid rounded-circle" style="
+                            <img src="{{#if admin.avatar}}{{admin.avatar}}{{else}}https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png{{/if}}" class="img-fluid rounded-circle" style="
                             width: 200px;
                             height: 200px;"
                                 alt="avatar">
@@ -38,9 +38,9 @@
                                         <div class="profile-name">
                                             <h4 class="text-primary">{{admin.fullname}}</h4>
                                             {{#if admin.job}}
-                                                <p class="text-muted">{{admin.job}}</p>
-                                                {{else}}
-                                                <p class="text-muted">Job: Unknown</p>
+                                            <p class="text-muted">{{admin.job}}</p>
+                                            {{else}}
+                                            <p class="text-muted">Job: Unknown</p>
                                             {{/if}}
 
                                         </div>
@@ -48,9 +48,9 @@
                                     <div class="col-lg-4 col-sm-4 border-right-1 prf-col">
                                         <div class="profile-email">
                                             {{#if admin.email}}
-                                                <h4 class="text-muted">{{admin.email}}</h4>
-                                                {{else}}
-                                                <h4 class="text-muted">Unknown</h4>
+                                            <h4 class="text-muted">{{admin.email}}</h4>
+                                            {{else}}
+                                            <h4 class="text-muted">Unknown</h4>
                                             {{/if}}
                                             <p>Email</p>
                                         </div>
@@ -60,9 +60,9 @@
                                     <div class="col-lg-4 col-sm-4 prf-col">
                                         <div class="profile-call">
                                             {{#if admin.phoneNumber}}
-                                                <h4 class="text-muted">{{admin.phoneNumber}}</h4>
-                                                {{else}}
-                                                <h4 class="text-muted">Unknown</h4>
+                                            <h4 class="text-muted">{{admin.phoneNumber}}</h4>
+                                            {{else}}
+                                            <h4 class="text-muted">Unknown</h4>
                                             {{/if}}
                                             <p>Phone No.</p>
                                         </div>

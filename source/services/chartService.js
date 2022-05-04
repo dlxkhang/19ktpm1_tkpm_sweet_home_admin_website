@@ -35,7 +35,6 @@ function loadAllHomeTour() {
                     createdAt: moment(homeTour.createdAt).format("DD/MM/YYYY").toLocaleString()
                 }
             })
-
             resolve(result);
         });
     })
