@@ -1,4 +1,4 @@
-
+const chartService = require('../services/chartService');
 class homeController {
     //[GET]  /
     home(req, res) {
@@ -11,7 +11,7 @@ class homeController {
         res.render('home');
     }
 
-async loadHomeTourByFilter(req, res) {
+    async loadHomeTourByFilter(req, res) {
       var data;
       switch(req.params.filter) { 
             case 'day':

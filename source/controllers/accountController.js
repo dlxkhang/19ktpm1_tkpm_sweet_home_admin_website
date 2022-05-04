@@ -58,22 +58,21 @@ class accountController{
     }
 
     async lockUserAccount(req, res) {
-        const ack = await adminService.lockUserAccount(req.params.id);
-        if(ack)
-          res.send(ack);
-      }
-  
-      async unlockUserAccount(req, res) {
-        const ack = await adminService.unlockUserAccount(req.params.id);
-        if(ack)
-          res.send(ack);
-      }
+      const ack = await adminService.lockUserAccount(req.params.id);
+      if(ack)
+        res.send(ack);
+    }
 
-      async loadUserDetail(req, res) {
-        const user = await adminService.loadUserDetail(req.params.id);
-        res.render('userDetail', {user});
-      }
+    async unlockUserAccount(req, res) {
+      const ack = await adminService.unlockUserAccount(req.params.id);
+      if(ack)
+        res.send(ack);
+    }
 
+    async loadUserDetail(req, res) {
+      const user = await adminService.loadUserDetail(req.params.id);
+      res.render('userDetail', {user});
+    }
 }
 
 module.exports = new accountController();

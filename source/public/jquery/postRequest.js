@@ -17,28 +17,26 @@ $(window).on('load', () => {
                  // Show loading spinner
                   $('.spanner').addClass('show');
                   $('.overlay-spinner').addClass('show');
-                  $('#addPropertyModal').hide();
+                  $('#addPropertyModal').modal('hide');
             },
             success: function(res){
-                $('.paging-wrapper').pagination('drawPage', 1);
-                loadPropertiesPerPage(1);
-                
                  // Show success modal
-                  $('#successModal').show();
+                  $('#successModal').modal('show');
                   // Hide loading spinner
                   $('.spanner').removeClass('show');
                   $('.overlay-spinner').removeClass('show');
                   $('#successTitle').text('Success');
                   $('#successMsg').text('Property has added to database');
 
-                  
+                  $('.paging-wrapper').pagination('drawPage', 1);
+                  loadPropertiesPerPage(1);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                if(errorThrown) {
                    console.log(errorThrown);
                    // Show error modal
-                    $('#errorModal').show();
-                    $('#addPropertyModal').hide();
+                    $('#errorModal').modal('show');
+                    $('#addPropertyModal').modal('hide');
                     $('#errorTitle').text('Error');
                     $('#errorMsg').text('Error: ' + errorThrown);
                }

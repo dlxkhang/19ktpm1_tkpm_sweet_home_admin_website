@@ -27,7 +27,7 @@ $(window).on('load', () => {
                 <br>
             </div>`;
 
-        const container = $(".addPropertyFeatureList");
+        const container = $("#featureList");
         container.append(template);
     });
 
@@ -35,22 +35,22 @@ $(window).on('load', () => {
     $("#addNewPropertyBtn").click(function (e) { 
         e.preventDefault();
         $(this).removeAttr("href");
-        $('#addPropertyModal').show();
+        $('#addPropertyModal').modal('show');
     });
 
     // Close add new property modal
-    $("#confirmFormBtn").click(function (e) { 
-        e.preventDefault();
-        $(this).removeAttr("href");
-        $('#addPropertyModal').modal('hide');
-    });
+    // $("#confirmFormBtn").click(function (e) { 
+    //     e.preventDefault();
+    //     $(this).removeAttr("href");
+    //     $('#addPropertyModal').modal('hide');
+    // });
 
     // Clear form input and close add new property modal when click cancel button
     $("#cancelFormBtn").click(function (e) { 
         e.preventDefault();
         $(this).removeAttr("href");
         $("#addForm")[0].reset();
-        $('#addPropertyModal').hide();
+        $('#addPropertyModal').modal('hide');
     });
 
 
@@ -59,7 +59,7 @@ $(window).on('load', () => {
     $("#success-modal-btn").click(function (e) { 
         e.preventDefault();
         $(this).removeAttr("href");
-        $('#successModal').hide();
+        $('#successModal').modal('hide');
     });
 
     // ------- ERROR MODAL EVENT --------
@@ -67,7 +67,7 @@ $(window).on('load', () => {
     $("#error-modal-btn").click(function (e) { 
         e.preventDefault();
         $(this).removeAttr("href");
-        $('#errorModal').hide();
+        $('#errorModal').modal('hide');
     });
 
     // ------- DELETE MODAL EVENT --------
